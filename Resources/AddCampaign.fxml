@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="TOP_RIGHT" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFiles.AddCampaignController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="-Infinity" prefWidth="156.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="257.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="0.0" prefWidth="172.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="212.0" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="212.0" minHeight="1.0" prefHeight="77.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="212.0" minHeight="2.0" prefHeight="2.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="97.0" minHeight="4.0" prefHeight="4.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Campaign" wrappingWidth="315.6708984375" GridPane.columnIndex="1">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Button fx:id="uploadRegisterButton" mnemonicParsing="false" onAction="#bulkUpload" prefHeight="31.0" prefWidth="136.0" text="Upload Register" GridPane.rowIndex="9" />
+        <TextField fx:id="filePathField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Button fx:id="createTableButton" mnemonicParsing="false" onAction="#createTable" text="Create Table" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <ScrollPane prefHeight="202.0" prefWidth="434.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="464.0">
+                    <children>
+                        <VBox layoutY="7.0" prefHeight="63.0" prefWidth="455.0">
+                            <children>
+                                <TextFlow fx:id="textFlowInstructions" prefHeight="98.0" prefWidth="450.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="To upload an electoral register, please follow the steps outlined below: " wrappingWidth="423.134765625" />
+                                    </children>
+                                </TextFlow>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <HBox alignment="CENTER" prefHeight="13.0" prefWidth="492.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <TextField fx:id="campaignNameField" prefHeight="31.0" prefWidth="259.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <TextField fx:id="wardNameField" prefHeight="31.0" prefWidth="262.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Campaign Name:" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ward Name:" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+         <children>
+            <VBox prefHeight="41.0" prefWidth="136.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Other Candidates:" wrappingWidth="134.6708984375" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Election Date" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <children>
+            <DatePicker fx:id="electionDatePicker" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Supported Candidate:" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <TextField fx:id="supportedCandidateField" prefHeight="31.0" prefWidth="256.0" />
+         </children>
+      </HBox>
+      <HBox GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <children>
+            <TextField fx:id="candidateNumberField" prefHeight="31.0" prefWidth="146.0" promptText="Enter total additional candidates" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button fx:id="addCandidateButton" mnemonicParsing="false" onAction="#addCandidateButtonPressed" prefHeight="31.0" prefWidth="53.0" text="+" />
+         </children>
+      </HBox>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="otherCandidatesBox" prefHeight="200.0" prefWidth="234.0">
+                     <children>
+                        <TextField fx:id="otherCandidatesField" prefHeight="31.0" prefWidth="179.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+    </children>
+    <padding>
+        <Insets right="5.0" />
+    </padding>
+</GridPane>
